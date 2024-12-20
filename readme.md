@@ -25,31 +25,9 @@ TELEGRAM_API_ID=your_api_id
 TELEGRAM_API_HASH=your_api_hash
 ```
 
-## Database Schema
-### Messages Table
-message_id (PRIMARY KEY)
-date
-token_name
-token_symbol
-contract_address
-deployer_address
-deployer_balance
-from_address
-age
-supply
-maxtx
-maxwallet
-tax
-similar_tokens
-deployed
-launched
-rugged
 
-### Metadata Table
-key (PRIMARY KEY)
-value
-
-## Processing Flow
+## Logic Flow
+```mermaid
 graph TD
     A[Start] --> B[Initialize Database]
     B --> C[Get Last Processed tg message ID]
@@ -66,7 +44,7 @@ graph TD
     L -->|Yes| M[Wait & Retry]
     M --> F
     L -->|No| G
-
+```
 
 
 ## Batch Processing
