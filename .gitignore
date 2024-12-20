@@ -1,0 +1,27 @@
+# Telethon session files
+*.session
+*.session-journal
+
+# Python virtual environment
+baseTgScraperEnv/
+venv/
+env/
+.env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+*.env
+config.env
+
+# Database
+*.db
+*.sqlite3
+channel_export.db
+
+# VS Code
+.vscode/
